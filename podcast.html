@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Podcast & Musik Digital oleh BOGEN SOLO – Mujiyanto. Nikmati konten kreatif untuk UMKM dan budaya Jawa di Spotify dan web.">
+  <meta name="description" content="Nikmati podcast & musik digital dari BOGEN SOLO – Mujiyanto. Konten kreatif untuk UMKM, budaya Jawa, dan solusi digital, tersedia di Spotify dan web.">
   <title>Podcast – BOGEN SOLO</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -73,34 +73,38 @@
       transition: 0.3s;
     }
 
-    /* PODCAST SECTION */
-    .podcast-content {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+    /* PODCAST CONTENT */
+    .podcast-section {
+      text-align: center;
     }
     .spotify-embed {
-      width: 100%;
       max-width: 700px;
-      margin: 0 auto;
-      border-radius: 12px;
+      margin: 30px auto;
+      border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
-    .local-player {
+    .spotify-embed iframe {
+      width: 100%;
+      height: 352px;
+      border: none;
+    }
+
+    /* LOCAL MEDIA (opsional) */
+    .local-media {
       background: rgba(255, 255, 255, 0.08);
       padding: 25px;
       border-radius: 15px;
-      text-align: center;
+      margin-top: 30px;
     }
-    .local-player audio,
-    .local-player video {
+    .local-media audio,
+    .local-media video {
       width: 100%;
       max-width: 600px;
       margin-top: 15px;
     }
 
-    /* === FOOTER === */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -108,7 +112,7 @@
       margin-top: 40px;
     }
 
-    /* === RESPONSIVE === */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .nav-menu {
@@ -124,14 +128,14 @@
         box-shadow: -5px 0 15px rgba(0,0,0,0.3);
       }
       .nav-menu.active { right: 0; }
-      .nav-menu a { margin: 15px 0; margin-left: 0; display: block; text-align: center; }
+      .nav-menu a { margin: 15px 0; display: block; text-align: center; }
 
       .hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
       .hamburger.active span:nth-child(2) { opacity: 0; }
       .hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 
-      .spotify-embed {
-        height: 350px !important;
+      .spotify-embed iframe {
+        height: 300px;
       }
     }
   </style>
@@ -153,57 +157,49 @@
     </nav>
   </header>
 
-  <section class="container">
+  <section class="container podcast-section">
     <h2>🎧 Podcast & Musik Digital</h2>
-    <p style="opacity: 0.9; margin-bottom: 30px;">
-      Nikmati konten audio dan video kreatif dari BOGEN SOLO as Mujiyanto — termasuk musik original, obrolan budaya, dan insight digital untuk UMKM — langsung di Spotify atau melalui player web di bawah.
+    <p style="opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">
+      Dengarkan konten kreatif dari BOGEN SOLO — obrolan seputar UMKM, budaya Jawa, produksi musik, dan tips digital — langsung di Spotify atau melalui player web.
     </p>
 
-    <div class="podcast-content">
-      <!-- Spotify Embed (Ganti dengan link show/podcast Anda) -->
-      <div class="spotify-embed">
-        <iframe 
-          src="https://open.spotify.com/embed/show/0your-podcast-id-here?utm_source=generator" 
-          width="100%" 
-          height="352" 
-          frameBorder="0" 
-          allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-          loading="lazy">
-        </iframe>
-      </div>
+    <!-- Spotify Embed -->
+    <div class="spotify-embed">
+      <iframe 
+        src="https://open.spotify.com/embed/show/YOUR_SPOTIFY_SHOW_ID?utm_source=generator" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
 
-      <!-- Optional: Local MP3/MP4 Player (uncomment if needed) -->
-      <!--
-      <div class="local-player">
-        <h3>Preview Lokal (Web Only)</h3>
-        <p>Putar file audio/video langsung dari website ini.</p>
-        <audio controls>
-          <source src="audio/episode1.mp3" type="audio/mpeg">
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
-        <!-- Atau untuk video:
-        <video controls>
-          <source src="video/episode1.mp4" type="video/mp4">
-          Browser Anda tidak mendukung pemutar video.
-        </video>
-        -->
-      </div>
+    <!-- Opsional: Player Lokal (uncomment jika ingin menampilkan file MP3/MP4 langsung) -->
+    <!--
+    <div class="local-media">
+      <h3>▶️ Putar di Website (Preview)</h3>
+      <audio controls>
+        <source src="audio/episode1.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+      </audio>
+      <!-- Untuk video:
+      <video controls>
+        <source src="video/episode1.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+      </video>
       -->
     </div>
+    -->
 
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://open.spotify.com/show/0your-podcast-id-here" target="_blank" class="btn">
-        <i class="fab fa-spotify"></i> Dengarkan di Spotify
-      </a>
-    </div>
+    <a href="https://open.spotify.com/show/tBRyWnWHEXb" target="_blank" class="btn">
+      <i class="fab fa-spotify"></i> Dengarkan di Spotify
+    </a>
   </section>
 
   <footer>
-    <p>&copy; 2015 - 2025 BOGEN SOLO – Mujiyanto. All rights reserved. Solusi Digital untuk UMKM Indonesia.</p>
+    <p>&copy; 2015 – 2025 BOGEN SOLO – Mujiyanto. All rights reserved.<br>Solusi Digital untuk UMKM Indonesia.</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Mobile Menu Toggle -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
