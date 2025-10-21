@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Podcast & Musik Digital oleh BOGEN SOLO – Mujiyanto. Nikmati konten kreatif untuk UMKM dan budaya Jawa di Spotify dan web.">
+  <title>Podcast – BOGEN SOLO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* === GLOBAL === */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body {
+      background: #0f0c29;
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    section { padding: 80px 5%; }
+    h1, h2, h3 { margin-bottom: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .btn {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: transform 0.3s;
+    }
+    .btn:hover { transform: scale(1.05); }
+
+    /* === HEADER === */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 12, 41, 0.8);
+    }
+    .logo { font-size: 24px; font-weight: bold; color: #ff9a8b; }
+
+    /* NAV MENU */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    .nav-menu a:hover {
+      color: #ff9a8b;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* PODCAST SECTION */
+    .podcast-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .spotify-embed {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .local-player {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .local-player audio,
+    .local-player video {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 15px;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.3);
+      margin-top: 40px;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(15, 12, 41, 0.95);
+        width: 250px;
+        height: calc(100vh - 70px);
+        padding: 20px;
+        transition: 0.3s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+      }
+      .nav-menu.active { right: 0; }
+      .nav-menu a { margin: 15px 0; margin-left: 0; display: block; text-align: center; }
+
+      .hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+      .hamburger.active span:nth-child(2) { opacity: 0; }
+      .hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+      .spotify-embed {
+        height: 350px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">BOGEN SOLO</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Beranda</a>
+      <a href="index.html#services">Layanan</a>
+      <a href="index.html#testimonials">Testimoni</a>
+      <a href="index.html#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>🎧 Podcast & Musik Digital</h2>
+    <p style="opacity: 0.9; margin-bottom: 30px;">
+      Nikmati konten audio dan video kreatif dari BOGEN SOLO as Mujiyanto — termasuk musik original, obrolan budaya, dan insight digital untuk UMKM — langsung di Spotify atau melalui player web di bawah.
+    </p>
+
+    <div class="podcast-content">
+      <!-- Spotify Embed (Ganti dengan link show/podcast Anda) -->
+      <div class="spotify-embed">
+        <iframe 
+          src="https://open.spotify.com/embed/show/0your-podcast-id-here?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Optional: Local MP3/MP4 Player (uncomment if needed) -->
+      <!--
+      <div class="local-player">
+        <h3>Preview Lokal (Web Only)</h3>
+        <p>Putar file audio/video langsung dari website ini.</p>
+        <audio controls>
+          <source src="audio/episode1.mp3" type="audio/mpeg">
+          Browser Anda tidak mendukung pemutar audio.
+        </audio>
+        <!-- Atau untuk video:
+        <video controls>
+          <source src="video/episode1.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutar video.
+        </video>
+        -->
+      </div>
+      -->
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://open.spotify.com/show/0your-podcast-id-here" target="_blank" class="btn">
+        <i class="fab fa-spotify"></i> Dengarkan di Spotify
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2015 - 2025 BOGEN SOLO – Mujiyanto. All rights reserved. Solusi Digital untuk UMKM Indonesia.</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
